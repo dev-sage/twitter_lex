@@ -23,7 +23,7 @@ d3.csv("data/word_frame.csv", function(error, data) {
 	function pull_author(time1) {
 		$message = $("<div id = 'message'></div>");
 		$("body").append($message);
-		$message.append("<center>" + time1[0].value + "</center>");
+		$message.append("<center> @" + time1[0].value + "</center>");
 	}
 
 	function remove_author() {
@@ -31,10 +31,10 @@ d3.csv("data/word_frame.csv", function(error, data) {
 	}
 
 
-	var padding = 50, w = window.innerWidth - 100, h = window.innerHeight - 100;
+	var padding = 50, w = window.innerWidth * 0.75, h = window.innerHeight - 100;
 
 	var xScale = d3.scale.linear()
-							.domain([0, d3.max(data, function(d) { return 6; })])
+							.domain([1, d3.max(data, function(d) { return 6; })])
 							.range([padding, w - padding]);
 
 	var yScale = d3.scale.linear()
