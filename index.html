@@ -3,6 +3,7 @@
 	<head>
 	<meta charset = "utf-8">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+	<script src="jquery-1.12.0.min.js"></script>
 	<title>Twitter Lexicon</title>
 	<style>
 
@@ -12,6 +13,15 @@
 			left-margin: 10%;
 			right-margin: 10%;
 			background-color: white;
+		}
+
+		#message
+		{
+			position: absolute;
+			top: 250px;
+			background-color: white;
+			margin-left: 150px;
+			font-size: 68px;
 		}
 
 		.axis path,
@@ -29,6 +39,13 @@
 			opacity: 0.1;
 		}
 
+		.line_path:hover
+		{
+			stroke: orange;
+			opacity: 1;
+			stroke-width: 2px;
+		}
+
 		.axis text {
 			font-family: sans-serif;
 			font-size: 11px;
@@ -39,8 +56,9 @@
 	</head>
 
 	<body>
-		<center><div id = "chart">
+		<center><h1> Twitter Lexical Analysis </h1></center>
+		<div id = "chart">
 			<script src = "lex_chart.js"></script>
-		</div></center>
+		</div>
 	</body>
 </html>
