@@ -31,7 +31,7 @@ d3.csv("data/word_frame.csv", function(error, data) {
 	}
 
 
-	var padding = 50, w = window.innerWidth * 0.75, h = window.innerHeight - 100;
+	var padding = 50, w = window.innerWidth * 0.75, h = window.innerHeight * 0.75;
 
 	var xScale = d3.scale.linear()
 							.domain([1, d3.max(data, function(d) { return 6; })])
